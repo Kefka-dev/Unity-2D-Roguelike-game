@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D theRB;
     public Transform gunArm;
     public Animator anim;
-
+    public GameObject bullet;
+    public Transform firePoint;
 
     private Vector2 moveInput;
     private Camera theCam;
@@ -35,6 +36,8 @@ public class PlayerController : MonoBehaviour
         Vector3 mousePos = Input.mousePosition;
         Vector3 screenPoint = theCam.WorldToScreenPoint(transform.localPosition);
 
+
+        //otocenie hraca a zbrane tak aby mierenie zbranou vyzeralo normalne
         if (mousePos.x < screenPoint.x)
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);
@@ -46,11 +49,23 @@ public class PlayerController : MonoBehaviour
             gunArm.transform.localScale = new Vector3(0.75f, 0.75f, 1f);
         }
 
-        //otacanie paprce
+        //otacanie ruk
         Vector2 offset = new Vector2(mousePos.x - screenPoint.x, mousePos.y - screenPoint.y);
         float angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
         gunArm.rotation = Quaternion.Euler(0, 0, angle);
 
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Instantiate(bullet, firePoint.position, firePoint.rotation);
+        }
+
+
+
+
+
+
+        //zistovanie ci sa hrac hybe na to aby sme vedeli ktora animacia ma prebiehat 
         if (moveInput != Vector2.zero)
         {
             anim.SetBool("isMoving", true);
