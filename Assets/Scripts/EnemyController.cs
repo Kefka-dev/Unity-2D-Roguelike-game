@@ -7,6 +7,8 @@ public class EnemyController : MonoBehaviour
     public Rigidbody2D theRB;
     public float moveSpeed;
     public Animator anim;
+    public int health;
+
 
     public float rangeToChasePlayer;
     private Vector3 moveDirection;
@@ -34,5 +36,14 @@ public class EnemyController : MonoBehaviour
         moveDirection.Normalize();
 
         theRB.velocity = moveDirection * moveSpeed;
+    }
+
+    public void DamageEnemy(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

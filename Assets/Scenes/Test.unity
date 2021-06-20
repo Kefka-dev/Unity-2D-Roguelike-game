@@ -303,6 +303,7 @@ MonoBehaviour:
   theRB: {fileID: 182732681}
   moveSpeed: 3
   anim: {fileID: 182732683}
+  health: 150
   rangeToChasePlayer: 5
 --- !u!95 &182732683
 Animator:
