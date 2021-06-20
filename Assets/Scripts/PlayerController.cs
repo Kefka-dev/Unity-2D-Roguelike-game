@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
     public float moveSpeed;
-   
     public Rigidbody2D theRB;
     public Transform gunArm;
     public Animator anim;
@@ -15,6 +15,10 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveInput;
     private Camera theCam;
 
+    private void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
