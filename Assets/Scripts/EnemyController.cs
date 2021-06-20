@@ -8,7 +8,7 @@ public class EnemyController : MonoBehaviour
     public float moveSpeed;
     public Animator anim;
     public int health;
-
+    public int giveTouchDamage;
 
     public float rangeToChasePlayer;
     private Vector3 moveDirection;
@@ -38,6 +38,16 @@ public class EnemyController : MonoBehaviour
         theRB.velocity = moveDirection * moveSpeed;
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Player")
+        {
+            //other.GetComponent<EnemyController>().DamageEnemy(giveDamage);
+            other.GetComponent<PlayerHealthController>().DamagePlayer();
+        }
+        
+    }
+
     public void DamageEnemy(int damage)
     {
         health -= damage;
@@ -46,4 +56,5 @@ public class EnemyController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 }

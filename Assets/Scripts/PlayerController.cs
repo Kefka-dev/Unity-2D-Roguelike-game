@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public Animator anim;
     public GameObject bullet;
     public Transform firePoint;
-
+ 
     private Vector2 moveInput;
     private Camera theCam;
 
