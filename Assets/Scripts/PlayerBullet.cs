@@ -29,4 +29,9 @@ public class PlayerBullet : MonoBehaviour
             other.GetComponent<EnemyController>().DamageEnemy(giveDamage);
         }
     }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
 }
