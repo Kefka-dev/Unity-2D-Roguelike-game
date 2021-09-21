@@ -7,6 +7,7 @@ public class PlayerBullet : MonoBehaviour
     public float speed = 8f;
     public Rigidbody2D theRB;
     public int giveDamage = 20;
+    public GameObject impactEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class PlayerBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(gameObject);
 
         if(other.tag == "Enemy")
