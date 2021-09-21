@@ -17,6 +17,9 @@ public class EnemyController : MonoBehaviour
     public GameObject bullet;
     public Transform firePoint;
     public float fireRate;
+    public float shootRange;
+
+    public SpriteRenderer theBody;
 
     private Vector3 moveDirection;
     private float fireCounter;
@@ -30,29 +33,32 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, PlayerController.instance.transform.position) < rangeToChasePlayer)
+        if(theBody.isVisible)
         {
-            moveDirection = PlayerController.instance.transform.position - transform.position;
-            anim.SetBool("isMoving", true);
-        }
-        else
-        {
-            moveDirection = Vector3.zero;
-            anim.SetBool("isMoving", false);
-        }
-
-        moveDirection.Normalize();
-
-        theRB.velocity = moveDirection * moveSpeed;
-
-        if(shouldShoot)
-        {
-            fireCounter -= Time.deltaTime;
-
-            if (fireCounter <= 0)
+            if (Vector3.Distance(transform.position, PlayerController.instance.transform.position) < rangeToChasePlayer)
             {
-                fireCounter = fireRate;
-                Instantiate(bullet, firePoint.position, firePoint.rotation);
+                moveDirection = PlayerController.instance.transform.position - transform.position;
+                anim.SetBool("isMoving", true);
+            }
+            else
+            {
+                moveDirection = Vector3.zero;
+                anim.SetBool("isMoving", false);
+            }
+
+            moveDirection.Normalize();
+
+            theRB.velocity = moveDirection * moveSpeed;
+
+            if (shouldShoot && Vector3.Distance(transform.position, PlayerController.instance.transform.position) < shootRange)
+            {
+                fireCounter -= Time.deltaTime;
+
+                if (fireCounter <= 0)
+                {
+                    fireCounter = fireRate;
+                    Instantiate(bullet, firePoint.position, firePoint.rotation);
+                }
             }
         }
     }

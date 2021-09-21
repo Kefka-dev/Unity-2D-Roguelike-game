@@ -285,6 +285,8 @@ MonoBehaviour:
   bullet: {fileID: 9111983642291218592, guid: cbd25d5d6f4b7184986287a299760e28, type: 3}
   firePoint: {fileID: 5245889909390531667}
   fireRate: 0.5
+  shootRange: 10
+  theBody: {fileID: 8561821131173283098}
 --- !u!50 &8561821131199228913
 Rigidbody2D:
   serializedVersion: 4
