@@ -11,9 +11,11 @@ public class PlayerController : MonoBehaviour
     public Animator anim;
     public GameObject bullet;
     public Transform firePoint;
- 
+    public float timeBetweenShots;
+
     private Vector2 moveInput;
     private Camera theCam;
+    private float shotCounter;
 
     private void Awake()
     {
@@ -58,13 +60,25 @@ public class PlayerController : MonoBehaviour
         float angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
         gunArm.rotation = Quaternion.Euler(0, 0, angle);
 
+        shotCounter -= Time.deltaTime;
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && shotCounter <= 0)
         {
+
             Instantiate(bullet, firePoint.position, firePoint.rotation);
+            shotCounter = timeBetweenShots;
         }
 
+        if (Input.GetMouseButton(0))
+        {
 
+            if (shotCounter <= 0)
+            {
+                Instantiate(bullet, firePoint.position, firePoint.rotation);
+
+                shotCounter = timeBetweenShots;
+            }
+        }
 
 
 
