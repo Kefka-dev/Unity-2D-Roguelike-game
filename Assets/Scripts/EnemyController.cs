@@ -12,8 +12,14 @@ public class EnemyController : MonoBehaviour
     public float rangeToChasePlayer;
     public GameObject[] deatchSplatters;
     public GameObject hitEffect;
+    
+    public bool shouldShoot;
+    public GameObject bullet;
+    public Transform firePoint;
+    public float fireRate;
 
     private Vector3 moveDirection;
+    private float fireCounter;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +44,17 @@ public class EnemyController : MonoBehaviour
         moveDirection.Normalize();
 
         theRB.velocity = moveDirection * moveSpeed;
+
+        if(shouldShoot)
+        {
+            fireCounter -= Time.deltaTime;
+
+            if (fireCounter <= 0)
+            {
+                fireCounter = fireRate;
+                Instantiate(bullet, firePoint.position, firePoint.rotation);
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
