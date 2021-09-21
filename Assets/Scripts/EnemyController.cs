@@ -9,8 +9,10 @@ public class EnemyController : MonoBehaviour
     public Animator anim;
     public int health;
     public int giveTouchDamage;
-
     public float rangeToChasePlayer;
+    public GameObject[] deatchSplatters;
+    public GameObject hitEffect;
+
     private Vector3 moveDirection;
 
     // Start is called before the first frame update
@@ -51,9 +53,16 @@ public class EnemyController : MonoBehaviour
     public void DamageEnemy(int damage)
     {
         health -= damage;
+
+        Instantiate(hitEffect, transform.position, transform.rotation);
         if (health <= 0)
         {
             Destroy(gameObject);
+
+            int selectedSplatter = Random.Range(0, deatchSplatters.Length);
+            int rotation = Random.Range(0, 4);
+
+            Instantiate(deatchSplatters[selectedSplatter], transform.position, Quaternion.Euler(0f, 0f, rotation * 90));
         }
     }
 
