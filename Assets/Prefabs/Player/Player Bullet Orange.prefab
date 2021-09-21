@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7364350935337371315}
   - component: {fileID: 7364350935337371314}
   - component: {fileID: 7364350935337371309}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player Bullet Orange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
