@@ -282,7 +282,7 @@ MonoBehaviour:
   - {fileID: 6472931293536248579, guid: 29fd9d5e3e79ebf4c85cf57e9ad26970, type: 3}
   hitEffect: {fileID: 524417406495958304, guid: b7459228cdf76cb45ac6a30d6790f4e9, type: 3}
   shouldShoot: 1
-  bullet: {fileID: 9111983642291218592, guid: cbd25d5d6f4b7184986287a299760e28, type: 3}
+  bullet: {fileID: 3272125763410491253, guid: a1ccd658e9f6a814eb41ba55cc8754f6, type: 3}
   firePoint: {fileID: 5245889909390531667}
   fireRate: 0.5
   shootRange: 10
