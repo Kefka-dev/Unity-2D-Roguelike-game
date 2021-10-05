@@ -8,7 +8,7 @@ public class PlayerHealthController : MonoBehaviour
     public int currentHealth;
     public int maxHealth;
 
-    public float durationInvinc = 1f;
+    public float durationInvinc;
 
     private float invincCounter;
 
@@ -36,12 +36,11 @@ public class PlayerHealthController : MonoBehaviour
             if(invincCounter <= 0)
             {
                 PlayerController.instance.bodySR.color = new Color(PlayerController.instance.bodySR.color.r,
-                PlayerController.instance.bodySR.color.g, PlayerController.instance.bodySR.color.b, 1f);
+                    PlayerController.instance.bodySR.color.g, PlayerController.instance.bodySR.color.b, 1f);
             }
 
         }
     }
-
     public void DamagePlayer()
     {
         if(invincCounter <= 0)
@@ -62,6 +61,13 @@ public class PlayerHealthController : MonoBehaviour
             UIController.instance.healthSlider.value = currentHealth;
             UIController.instance.healthText.text = currentHealth.ToString() + " / " + maxHealth.ToString();
         }
+    }
+
+    public void BeInvincible(float duration)
+    {
+        invincCounter = duration;
+        PlayerController.instance.bodySR.color = new Color(PlayerController.instance.bodySR.color.r,
+            PlayerController.instance.bodySR.color.g, PlayerController.instance.bodySR.color.b, .5f);
     }
 
 }

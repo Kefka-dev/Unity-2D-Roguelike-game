@@ -234,11 +234,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8561821131199228927, guid: 93d08836e01fb434c98254a0cfb8a9ad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.31
+      value: 12.05
       objectReference: {fileID: 0}
     - target: {fileID: 8561821131199228927, guid: 93d08836e01fb434c98254a0cfb8a9ad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.52
+      value: 1.37
       objectReference: {fileID: 0}
     - target: {fileID: 8561821131199228927, guid: 93d08836e01fb434c98254a0cfb8a9ad, type: 3}
       propertyPath: m_LocalPosition.z
@@ -314,6 +314,10 @@ MonoBehaviour:
   firePoint: {fileID: 1237954192}
   timeBetweenShots: 0.5
   bodySR: {fileID: 965877213}
+  dashSpeed: 8
+  dashLenght: 0.5
+  dashCooldown: 1
+  dashInvincibility: 0.5
 --- !u!4 &347437266
 Transform:
   m_ObjectHideFlags: 0
@@ -982,7 +986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 5
-  durationInvinc: 1
+  durationInvinc: 0.5
 --- !u!4 &941052748
 Transform:
   m_ObjectHideFlags: 0
@@ -1021,7 +1025,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965877211}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []

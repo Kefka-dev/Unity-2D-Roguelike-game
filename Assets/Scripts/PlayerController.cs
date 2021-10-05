@@ -29,7 +29,6 @@ public class PlayerController : MonoBehaviour
 
     private float activeMovespeed;
     private float dashDuration, dashCooldownCounter;
-
     private void Awake()
     {
         instance = this;
@@ -103,6 +102,7 @@ public class PlayerController : MonoBehaviour
                 activeMovespeed = dashSpeed;
                 dashDuration = dashLenght;
 
+                PlayerHealthController.instance.BeInvincible(dashInvincibility);
                 anim.SetTrigger("dash");
             }
         }
