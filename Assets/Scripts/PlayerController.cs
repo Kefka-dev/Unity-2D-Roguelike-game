@@ -5,18 +5,30 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
+    
     public float moveSpeed;
+    
     public Rigidbody2D theRB;
+    
     public Transform gunArm;
+  
     public Animator anim;
+    
     public GameObject bullet;
     public Transform firePoint;
+  
     public float timeBetweenShots;
+    
     public SpriteRenderer bodySR;
+
+    public float dashSpeed = 8f, dashLenght = .5f, dashCooldown = 1f, dashInvincibility = .5f;
 
     private Vector2 moveInput;
     private Camera theCam;
     private float shotCounter;
+
+    private float activeMovespeed;
+    private float dashDuration, dashCooldownCounter;
 
     private void Awake()
     {
@@ -27,6 +39,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         theCam = Camera.main;
+
+        activeMovespeed = moveSpeed;
     }
 
     // Update is called once per frame
@@ -38,7 +52,7 @@ public class PlayerController : MonoBehaviour
         moveInput.Normalize();
         //transform.position += new Vector3(moveInput.x * Time.deltaTime * moveSpeed, moveInput.y * Time.deltaTime * moveSpeed, 0f);
 
-        theRB.velocity = moveInput * moveSpeed;
+        theRB.velocity = moveInput * activeMovespeed;
 
         Vector3 mousePos = Input.mousePosition;
         Vector3 screenPoint = theCam.WorldToScreenPoint(transform.localPosition);
@@ -81,7 +95,32 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
 
+            if (dashCooldownCounter <= 0 && dashDuration <= 0)
+            {
+                activeMovespeed = dashSpeed;
+                dashDuration = dashLenght;
+
+                anim.SetTrigger("dash");
+            }
+        }
+
+        if (dashDuration > 0)
+        {
+            dashDuration -= Time.deltaTime;
+            if(dashDuration <= 0)
+            {
+                activeMovespeed = moveSpeed;
+                dashCooldownCounter = dashCooldown;
+            }
+        }
+
+        if (dashCooldownCounter > 0)
+        {
+            dashCooldownCounter -= Time.deltaTime;
+        }
 
 
         //zistovanie ci sa hrac hybe na to aby sme vedeli ktora animacia ma prebiehat 
