@@ -8,6 +8,8 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource levelMusic, gameOverMusic, winMusic;
 
+    public AudioSource[] sfx;
+
     private void Awake()
     {
         instance = this;
@@ -35,5 +37,11 @@ public class AudioManager : MonoBehaviour
     {
         levelMusic.Stop();
         winMusic.Play();
+    }
+
+    public void PlaySFX(int SFXid)
+    {
+        sfx[SFXid].Stop();
+        sfx[SFXid].Play();
     }
 }
