@@ -70,4 +70,15 @@ public class PlayerHealthController : MonoBehaviour
             PlayerController.instance.bodySR.color.g, PlayerController.instance.bodySR.color.b, .5f);
     }
 
+    public void HealPlayer(int healAmount)
+    {
+        currentHealth += healAmount;
+        if(currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+
+        UIController.instance.healthSlider.value = currentHealth;
+        UIController.instance.healthText.text = currentHealth.ToString() + " / " + maxHealth.ToString();
+    }
 }

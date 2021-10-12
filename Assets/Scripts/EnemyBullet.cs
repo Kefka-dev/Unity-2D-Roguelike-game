@@ -23,11 +23,13 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Player")
+        Destroy(gameObject);
+
+        if (other.tag == "Player")
         {
             PlayerHealthController.instance.DamagePlayer();
         }
-        Destroy(gameObject);
+        
     }
 
     private void OnBecameInvisible()
