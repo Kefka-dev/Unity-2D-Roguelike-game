@@ -79,11 +79,13 @@ public class EnemyController : MonoBehaviour
     public void DamageEnemy(int damage)
     {
         health -= damage;
+        AudioManager.instance.PlaySFX(3);
 
         Instantiate(hitEffect, transform.position, transform.rotation);
         if (health <= 0)
         {
             Destroy(gameObject);
+            AudioManager.instance.PlaySFX(2);
 
             int selectedSplatter = Random.Range(0, deatchSplatters.Length);
             int rotation = Random.Range(0, 4);

@@ -46,6 +46,7 @@ public class PlayerHealthController : MonoBehaviour
         if(invincCounter <= 0)
         {
             currentHealth --;
+            AudioManager.instance.PlaySFX(12);
             invincCounter = durationInvinc;
 
             PlayerController.instance.bodySR.color = new Color(PlayerController.instance.bodySR.color.r, 
@@ -53,6 +54,7 @@ public class PlayerHealthController : MonoBehaviour
 
             if(currentHealth <= 0)
             {
+                AudioManager.instance.PlaySFX(10);
                 PlayerController.instance.gameObject.SetActive(false);
 
                 UIController.instance.deathScreen.SetActive(true);
@@ -74,7 +76,8 @@ public class PlayerHealthController : MonoBehaviour
     public void HealPlayer(int healAmount)
     {
         currentHealth += healAmount;
-        if(currentHealth > maxHealth)
+        AudioManager.instance.PlaySFX(8);
+        if (currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
         }

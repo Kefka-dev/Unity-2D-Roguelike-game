@@ -30,6 +30,7 @@ public class Breakables : MonoBehaviour
         {
             Destroy(gameObject);
 
+            AudioManager.instance.PlaySFX(1);
             int piecesToDrop = Random.Range(1, maxPieces);
             
             

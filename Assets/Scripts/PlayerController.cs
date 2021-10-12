@@ -80,6 +80,7 @@ public class PlayerController : MonoBehaviour
         {
 
             Instantiate(bullet, firePoint.position, firePoint.rotation);
+            AudioManager.instance.PlaySFX(13);
             shotCounter = timeBetweenShots;
         }
 
@@ -89,7 +90,7 @@ public class PlayerController : MonoBehaviour
             if (shotCounter <= 0)
             {
                 Instantiate(bullet, firePoint.position, firePoint.rotation);
-
+                AudioManager.instance.PlaySFX(13);
                 shotCounter = timeBetweenShots;
             }
         }
@@ -99,6 +100,7 @@ public class PlayerController : MonoBehaviour
 
             if (dashCooldownCounter <= 0 && dashDuration <= 0)
             {
+                AudioManager.instance.PlaySFX(9);
                 activeMovespeed = dashSpeed;
                 dashDuration = dashLenght;
 
