@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5788028765877191372}
   - component: {fileID: 5788028765877191375}
   - component: {fileID: 3289017161285781943}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: box
-  m_TagString: Box
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,6 +105,10 @@ MonoBehaviour:
   - {fileID: 5663794031572340458, guid: 9311cdb9e14bce941b8fac501aa94824, type: 3}
   - {fileID: 5967436519753738511, guid: c3ba8cebfe0fdfc4aa8c4c9302d4c329, type: 3}
   maxPieces: 4
+  shouldDropItem: 1
+  itemsToDrop:
+  - {fileID: 3333516710269201491, guid: e7c96c10fd9afa14496bcf40064f6a27, type: 3}
+  itemDropChance: 50
 --- !u!61 &5788028765877191375
 BoxCollider2D:
   m_ObjectHideFlags: 0

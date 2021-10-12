@@ -24,10 +24,12 @@ public class EnemyBullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Destroy(gameObject);
+        Debug.Log("kokot");
 
-        if (other.tag == "Player")
+        if(other.tag == "Player")
         {
             PlayerHealthController.instance.DamagePlayer();
+            Debug.Log("pica");
         }
         
     }
