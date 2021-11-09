@@ -7,28 +7,27 @@ public class EnemyController : MonoBehaviour
     public Rigidbody2D theRB;
     public float moveSpeed;
 
-    //chasing enemy
+    [Header("Chase Player")]
     public bool shouldChase;
     public float rangeToChasePlayer;
     private Vector3 moveDirection;
 
-    //runaway enemy
+    [Header("Run Away")]
     public bool shouldRunAway;
     public float runawayRange;
 
-    //wanderring enemy
+    [Header("Wandering")]
     public bool shouldWander;
     public float wanderLenght, pauseLenght;
     private float wanderCounter, pauseCounter;
     private Vector3 wanderDirection;
 
-    public Animator anim;
+    [Header("Patrolling")]
+    public bool shouldPatrol;
+    public Transform[] patrolPoint;
+    private int currentPatrolPoint;
 
-    public int health;
-
-    public GameObject[] deatchSplatters;
-    public GameObject hitEffect;
-
+    [Header("Shooting")]
     public bool shouldShoot;
 
     public GameObject bullet;
@@ -37,11 +36,16 @@ public class EnemyController : MonoBehaviour
     private float fireCounter;
 
 
-    public int giveTouchDamage;
-
     public float shootRange;
 
+    [Header("Variables")]
     public SpriteRenderer theBody;
+    public Animator anim;
+
+    public int health;
+
+    public GameObject[] deatchSplatters;
+    public GameObject hitEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -94,6 +98,20 @@ public class EnemyController : MonoBehaviour
                         }
                     }
 
+                }
+
+                if (shouldPatrol)
+                {
+                    moveDirection = patrolPoint[currentPatrolPoint].position - transform.position;
+
+                    if(Vector3.Distance(transform.position, patrolPoint[currentPatrolPoint].position) < .2f)
+                    {
+                        currentPatrolPoint ++;
+                        if(currentPatrolPoint >= patrolPoint.Length)
+                        {
+                            currentPatrolPoint = 0;
+                        }
+                    }
                 }
             }
 
