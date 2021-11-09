@@ -1050,12 +1050,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeWhenEntered: 1
-  openWhenCleared: 1
   doors:
-  - {fileID: 6763861940709877837}
   - {fileID: 8182445681914934433}
-  enemies:
-  - {fileID: 0}
+  roomActive: 0
 --- !u!50 &1380410795415308675
 Rigidbody2D:
   serializedVersion: 4
@@ -1212,7 +1209,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8182445681914934433}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.5, y: 0, z: 0}
+  m_LocalPosition: {x: -8.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1823525150289743593}

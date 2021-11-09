@@ -1351,12 +1351,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeWhenEntered: 1
-  openWhenCleared: 1
   doors:
-  - {fileID: 3962599248745020754}
   - {fileID: 3962599250055653396}
-  enemies:
-  - {fileID: 0}
+  roomActive: 0
 --- !u!50 &3962599250198924201
 Rigidbody2D:
   serializedVersion: 4
