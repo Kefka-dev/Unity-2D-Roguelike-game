@@ -172,6 +172,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  shouldShoot: 0
+  bullet: {fileID: 3272125763410491253, guid: a1ccd658e9f6a814eb41ba55cc8754f6, type: 3}
+  firePoint: {fileID: 1396928372827991150}
+  fireRate: 0.3
+  shootRange: 10
+  theBody: {fileID: 3278186311173846311}
   anim: {fileID: 3278186311164681166}
   health: 150
   deatchSplatters:
@@ -180,13 +186,6 @@ MonoBehaviour:
   - {fileID: 636927918241182804, guid: 42bd4b8e1ab5b204f82565e56c312e77, type: 3}
   - {fileID: 6472931293536248579, guid: 29fd9d5e3e79ebf4c85cf57e9ad26970, type: 3}
   hitEffect: {fileID: 524417406495958304, guid: b7459228cdf76cb45ac6a30d6790f4e9, type: 3}
-  shouldShoot: 0
-  bullet: {fileID: 3272125763410491253, guid: a1ccd658e9f6a814eb41ba55cc8754f6, type: 3}
-  firePoint: {fileID: 1396928372827991150}
-  fireRate: 0.3
-  giveTouchDamage: 0
-  shootRange: 10
-  theBody: {fileID: 3278186311173846311}
 --- !u!50 &3278186311164681164
 Rigidbody2D:
   serializedVersion: 4
