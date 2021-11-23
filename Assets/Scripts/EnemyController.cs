@@ -47,6 +47,10 @@ public class EnemyController : MonoBehaviour
     public GameObject[] deatchSplatters;
     public GameObject hitEffect;
 
+    public bool shouldDropItem;
+    public GameObject[] itemsToDrop;
+    public float itemDropChance;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -172,6 +176,18 @@ public class EnemyController : MonoBehaviour
             int rotation = Random.Range(0, 4);
 
             Instantiate(deatchSplatters[selectedSplatter], transform.position, Quaternion.Euler(0f, 0f, rotation * 90));
+
+            if (shouldDropItem == true)
+            {
+                float dropChance = Random.Range(0f, 100f);
+
+                if (dropChance < itemDropChance)
+                {
+                    int randomItem = Random.Range(0, itemsToDrop.Length);
+
+                    Instantiate(itemsToDrop[randomItem], transform.position, transform.rotation);
+                }
+            }
         }
     }
 

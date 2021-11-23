@@ -111,6 +111,17 @@ MonoBehaviour:
   rangeToChasePlayer: 5
   shouldRunAway: 1
   runawayRange: 6
+  shouldWander: 0
+  wanderLenght: 0
+  pauseLenght: 0
+  shouldPatrol: 0
+  patrolPoint: []
+  shouldShoot: 0
+  bullet: {fileID: 3272125763410491253, guid: a1ccd658e9f6a814eb41ba55cc8754f6, type: 3}
+  firePoint: {fileID: 6380889085723844518}
+  fireRate: 0.3
+  shootRange: 10
+  theBody: {fileID: 7390951453461808879}
   anim: {fileID: 7390951453435357190}
   health: 150
   deatchSplatters:
@@ -119,13 +130,10 @@ MonoBehaviour:
   - {fileID: 636927918241182804, guid: 42bd4b8e1ab5b204f82565e56c312e77, type: 3}
   - {fileID: 6472931293536248579, guid: 29fd9d5e3e79ebf4c85cf57e9ad26970, type: 3}
   hitEffect: {fileID: 524417406495958304, guid: b7459228cdf76cb45ac6a30d6790f4e9, type: 3}
-  shouldShoot: 0
-  bullet: {fileID: 3272125763410491253, guid: a1ccd658e9f6a814eb41ba55cc8754f6, type: 3}
-  firePoint: {fileID: 6380889085723844518}
-  fireRate: 0.3
-  giveTouchDamage: 0
-  shootRange: 10
-  theBody: {fileID: 7390951453461808879}
+  shouldDropItem: 0
+  itemsToDrop:
+  - {fileID: 205456044546297681, guid: 2286e4fee2f1dd642ae8adc08dc2fd51, type: 3}
+  itemDropChance: 25
 --- !u!50 &7390951453435357188
 Rigidbody2D:
   serializedVersion: 4
