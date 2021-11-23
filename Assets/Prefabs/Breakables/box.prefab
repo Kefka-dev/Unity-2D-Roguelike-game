@@ -108,7 +108,9 @@ MonoBehaviour:
   shouldDropItem: 1
   itemsToDrop:
   - {fileID: 3333516710269201491, guid: e7c96c10fd9afa14496bcf40064f6a27, type: 3}
-  itemDropChance: 50
+  - {fileID: 205456044546297681, guid: 2286e4fee2f1dd642ae8adc08dc2fd51, type: 3}
+  - {fileID: 205456044546297681, guid: 2286e4fee2f1dd642ae8adc08dc2fd51, type: 3}
+  itemDropChance: 25
 --- !u!61 &5788028765877191375
 BoxCollider2D:
   m_ObjectHideFlags: 0
