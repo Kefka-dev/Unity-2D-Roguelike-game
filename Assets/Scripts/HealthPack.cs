@@ -25,7 +25,9 @@ public class HealthPack : MonoBehaviour
             if(PlayerHealthController.instance.currentHealth < PlayerHealthController.instance.maxHealth)
             {
                 PlayerHealthController.instance.HealPlayer(healAmount);
-                Destroy(gameObject);    
+                Destroy(gameObject);
+
+                AudioManager.instance.PlaySFX(8);
             }
         }
     }
