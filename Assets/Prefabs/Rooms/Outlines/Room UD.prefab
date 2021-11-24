@@ -362,7 +362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4934419489773641363}
   - component: {fileID: 3973626821241581585}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -714,7 +714,7 @@ GameObject:
   - component: {fileID: 8869841632696324330}
   - component: {fileID: 4085738574011390202}
   - component: {fileID: 5090071856538274780}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
