@@ -110,6 +110,7 @@ public class PlayerController : MonoBehaviour
                     AudioManager.instance.PlaySFX(9);
                     activeMovespeed = dashSpeed;
                     dashDuration = dashLenght;
+                    Physics2D.IgnoreLayerCollision(8, 10, true);
 
                     PlayerHealthController.instance.BeInvincible(dashInvincibility);
                     anim.SetTrigger("dash");
@@ -123,6 +124,7 @@ public class PlayerController : MonoBehaviour
                 {
                     activeMovespeed = moveSpeed;
                     dashCooldownCounter = dashCooldown;
+                    Physics2D.IgnoreLayerCollision(8, 10, false);
                 }
             }
 
