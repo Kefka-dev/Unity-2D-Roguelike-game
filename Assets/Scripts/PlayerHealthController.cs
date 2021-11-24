@@ -85,4 +85,14 @@ public class PlayerHealthController : MonoBehaviour
         UIController.instance.healthSlider.value = currentHealth;
         UIController.instance.healthText.text = currentHealth.ToString() + " / " + maxHealth.ToString();
     }
+
+    public void increaseMaxHealth(int amount)
+    {
+        maxHealth += amount;
+        currentHealth += amount;
+
+        UIController.instance.healthSlider.maxValue = maxHealth;
+        UIController.instance.healthSlider.value = currentHealth;
+        UIController.instance.healthText.text = currentHealth.ToString() + " / " + maxHealth.ToString();
+    }
 }
