@@ -8,6 +8,7 @@ public class Room : MonoBehaviour
 
     public GameObject[] doors;
 
+    public GameObject mapHider;
     //public List<GameObject> enemies = new List<GameObject>();
 
     [HideInInspector]
@@ -56,6 +57,8 @@ public class Room : MonoBehaviour
                     door.SetActive(true);
                 }
             }
+
+            mapHider.SetActive(false);
         }
         roomActive = true;
     }
