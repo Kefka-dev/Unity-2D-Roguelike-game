@@ -97,7 +97,7 @@ MonoBehaviour:
   fireRate: 0.3
   shootRange: 10
   theBody: {fileID: 7812682900278446495}
-  anim: {fileID: 0}
+  anim: {fileID: 7812682900251993974}
   health: 150
   deatchSplatters:
   - {fileID: 53907094657283622, guid: a4b9a54eb27c0744183023ef8ecce87c, type: 3}
@@ -140,7 +140,7 @@ Animator:
   m_GameObject: {fileID: 7812682900251993979}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cfc84334874646744b9a4393389cd161, type: 2}
+  m_Controller: {fileID: 9100000, guid: 31ff91ce64f67b145927b278e303c193, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
