@@ -77,7 +77,11 @@ MonoBehaviour:
   layoutRoom: {fileID: 731987431163643547, guid: 272ac0c298205e84bbb000b21d320b09, type: 3}
   startColor: {r: 0.06741722, g: 0.9528302, b: 0.31338987, a: 1}
   endColor: {r: 1, g: 0, b: 0, a: 1}
-  distanceToEnd: 6
+  shopColor: {r: 1, g: 0.845397, b: 0, a: 1}
+  distanceToEnd: 8
+  includeShop: 1
+  minDistanceToShop: 3
+  maxDistanceToShop: 7
   generatorPoint: {fileID: 4556119652211120094}
   selectedDirection: 0
   xOffset: 18
@@ -103,6 +107,14 @@ MonoBehaviour:
     fourway: {fileID: 8189562251563227590, guid: f17508bef8a646842ac7c7ecdb336616, type: 3}
   centerStart: {fileID: 8244879692445288680, guid: eecde4a3474bbca429cf233484c391bd, type: 3}
   centerEnd: {fileID: 1221513583118051159, guid: c8c034ed432e89d46988f0c28fa92909, type: 3}
+  centerShop: {fileID: 1908571121851679834, guid: 5246b9da3dffb5a4eabbfbe32a2ac4af, type: 3}
   potentialCenters:
   - {fileID: 1191168741918359318, guid: d9800bc53fc6a544a860069ec252cfb0, type: 3}
   - {fileID: 8244879692445288680, guid: eecde4a3474bbca429cf233484c391bd, type: 3}
+  - {fileID: 1191168741918359318, guid: 456d783dc0b956449a4c9b8ef7cd2b76, type: 3}
+  - {fileID: 1191168741918359318, guid: 9c3352debceb3ee45b1297c3ede877db, type: 3}
+  - {fileID: 1191168741918359318, guid: e39fd535b5b4ede48a77fdd4aa75330b, type: 3}
+  - {fileID: 1191168741918359318, guid: 68abc85236c86174aae1fa21322e1004, type: 3}
+  - {fileID: 1191168741918359318, guid: a13feeff8c0127d4db1348230869fcdd, type: 3}
+  - {fileID: 1191168741918359318, guid: b5a5a31cc959a1945818a1897ad790a7, type: 3}
+  - {fileID: 1191168741918359318, guid: 1f5d3f6690a1ae34483ff6e717212b94, type: 3}
