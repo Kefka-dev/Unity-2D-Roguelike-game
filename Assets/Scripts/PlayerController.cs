@@ -14,12 +14,14 @@ public class PlayerController : MonoBehaviour
   
     public Animator anim;
     
-    public GameObject bullet;
+    /*public GameObject bullet;
     public Transform firePoint;
   
     public float timeBetweenShots;
-    
+    private float shotCounter;*/
+
     public SpriteRenderer bodySR;
+    
 
     public float dashSpeed = 8f, dashLenght = .5f, dashCooldown = 1f, dashInvincibility = .5f;
 
@@ -27,7 +29,7 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 moveInput;
     private Camera theCam;
-    private float shotCounter;
+    
 
     private float activeMovespeed;
     private float dashDuration, dashCooldownCounter;
@@ -81,7 +83,7 @@ public class PlayerController : MonoBehaviour
             float angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
             gunArm.rotation = Quaternion.Euler(0, 0, angle);
 
-            shotCounter -= Time.deltaTime;
+            /*shotCounter -= Time.deltaTime;
 
             if (Input.GetMouseButtonDown(0) && shotCounter <= 0)
             {
@@ -100,7 +102,7 @@ public class PlayerController : MonoBehaviour
                     AudioManager.instance.PlaySFX(13);
                     shotCounter = timeBetweenShots;
                 }
-            }
+            }*/
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
