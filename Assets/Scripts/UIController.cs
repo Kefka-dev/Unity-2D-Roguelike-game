@@ -11,6 +11,8 @@ public class UIController : MonoBehaviour
     public Slider healthSlider;
     public Text healthText, coinText;
 
+    public RawImage mapRenderer;
+
     public GameObject deathScreen;
 
     public Image fadeScreen;
@@ -21,6 +23,10 @@ public class UIController : MonoBehaviour
     public string newGameScene, mainMenuScene;
 
     public GameObject pauseMenu;
+
+    public Animator minimapAnim;
+    public Camera miniMapCam;
+    public int zoomedCamSize, normalCamSize;
 
     private void Awake()
     {
@@ -79,5 +85,30 @@ public class UIController : MonoBehaviour
     public void resume()
     {
         LevelManager.instance.pauseUnpause();
+    }
+
+    public void mapLowOppacity()
+    {
+        mapRenderer.color = new Color(mapRenderer.color.r, mapRenderer.color.g, mapRenderer.color.b, .2f);
+        //mapRenderer.color = new Color(mapRenderer.color.r, mapRenderer.color.g, Mathf.MoveTowards(mapRenderer.color.a, .2f, mapFadeSpeed * Time.deltaTime));
+    }
+
+    public void mapNormalOppacity()
+    {
+        mapRenderer.color = new Color(mapRenderer.color.r, mapRenderer.color.g, mapRenderer.color.b, .6f);
+        //mapRenderer.color = new Color(mapRenderer.color.r, mapRenderer.color.g, Mathf.MoveTowards(mapRenderer.color.a, .6f, mapFadeSpeed * Time.deltaTime));
+
+    }
+
+    public void mapScaleUp()
+    {
+        minimapAnim.SetBool("ScaleUp", true);
+        miniMapCam.orthographicSize = zoomedCamSize;
+    }
+
+    public void mapScaleDown()
+    {
+        minimapAnim.SetBool("ScaleUp", false);
+        miniMapCam.orthographicSize = normalCamSize;
     }
 }

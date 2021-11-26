@@ -56,6 +56,7 @@ public class Room : MonoBehaviour
                 {
                     door.SetActive(true);
                 }
+                UIController.instance.mapLowOppacity();
             }
 
             mapHider.SetActive(false);
@@ -70,6 +71,7 @@ public class Room : MonoBehaviour
             door.SetActive(false);
             closeWhenEntered = false;
         }
+        UIController.instance.mapNormalOppacity();
     }
 
     private void OnTriggerExit2D(Collider2D other)
