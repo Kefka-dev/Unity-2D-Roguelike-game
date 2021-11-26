@@ -182,6 +182,7 @@ MonoBehaviour:
   bullet: {fileID: 5853394454632928078, guid: c656f56cd909ae04a8d715bc4be37ebe, type: 3}
   firePoint: {fileID: 885699925155899478}
   timeBetweenShots: 0.1
+  Revolver: 0
 --- !u!1 &8685565977250288653
 GameObject:
   m_ObjectHideFlags: 0
