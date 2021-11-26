@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
 
     public float dashSpeed = 8f, dashLenght = .5f, dashCooldown = 1f, dashInvincibility = .5f;
 
+    [HideInInspector]
     public bool canMove = true;
 
     private Vector2 moveInput;
@@ -33,6 +34,9 @@ public class PlayerController : MonoBehaviour
 
     private float activeMovespeed;
     private float dashDuration, dashCooldownCounter;
+
+    public List<Gun> availableGuns = new List<Gun>();
+    private int currentGun;
     private void Awake()
     {
         instance = this;
@@ -103,6 +107,23 @@ public class PlayerController : MonoBehaviour
                     shotCounter = timeBetweenShots;
                 }
             }*/
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                if(availableGuns.Count > 0)
+                {
+                    currentGun++;
+                    if (currentGun > availableGuns.Count - 1)
+                    {
+                        currentGun = 0;
+                    }
+                    switchGun();
+                }
+                else
+                {
+                    Debug.Log("Player has no guns!");
+                }
+            }
+
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -151,5 +172,16 @@ public class PlayerController : MonoBehaviour
             theRB.velocity = Vector2.zero;
             anim.SetBool("isMoving", false);
         }
+    }
+
+    public void switchGun()
+    {
+        foreach(Gun theGun in availableGuns)
+        {
+            theGun.gameObject.SetActive(false);
+
+        }
+
+        availableGuns[currentGun].gameObject.SetActive(true);
     }
 }
