@@ -9,7 +9,19 @@ public class PlayerBullet : MonoBehaviour
     public int giveDamage = 20;
     public GameObject impactEffect;
 
+    public bool ShouldBulletDecay;
+    public float timeToLive;
+
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        if (ShouldBulletDecay)
+        {
+            Destroy(gameObject, timeToLive);
+        }
+    }
+
     void Start()
     {
         
