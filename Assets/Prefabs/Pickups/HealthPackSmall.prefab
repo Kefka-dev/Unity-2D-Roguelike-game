@@ -96,7 +96,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9e3a6ec828f0b9468d7f69e9f38b10e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMedkit: 1
+  isCoin: 0
+  isGun: 0
   healAmount: 1
+  coinValue: 0
 --- !u!61 &3333516710269201495
 BoxCollider2D:
   m_ObjectHideFlags: 0

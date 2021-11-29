@@ -36,7 +36,8 @@ public class PlayerController : MonoBehaviour
     private float dashDuration, dashCooldownCounter;
 
     public List<Gun> availableGuns = new List<Gun>();
-    private int currentGun;
+    [HideInInspector]
+    public int currentGun;
     private void Awake()
     {
         instance = this;
@@ -48,6 +49,9 @@ public class PlayerController : MonoBehaviour
         theCam = Camera.main;
 
         activeMovespeed = moveSpeed;
+
+        UIController.instance.currentGun.sprite = availableGuns[currentGun].gunUI;
+        UIController.instance.gunDescription.text = availableGuns[currentGun].weaponName;
     }
 
     // Update is called once per frame
@@ -183,5 +187,8 @@ public class PlayerController : MonoBehaviour
         }
 
         availableGuns[currentGun].gameObject.SetActive(true);
+
+        UIController.instance.currentGun.sprite = availableGuns[currentGun].gunUI;
+        UIController.instance.gunDescription.text = availableGuns[currentGun].weaponName;
     }
 }

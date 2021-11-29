@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &205456044546297681
+--- !u!1 &360774409123110974
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 205456044546297694}
-  - component: {fileID: 205456044546297695}
-  - component: {fileID: 205456044546297680}
-  - component: {fileID: 1178019553173345176}
+  - component: {fileID: 360774409123110946}
+  - component: {fileID: 360774409123110973}
+  - component: {fileID: 360774409123110972}
+  - component: {fileID: 360774409123110975}
   m_Layer: 14
-  m_Name: Coin
+  m_Name: Pistol pickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &205456044546297694
+--- !u!4 &360774409123110946
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 205456044546297681}
+  m_GameObject: {fileID: 360774409123110974}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.7642584, y: -2.887366, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_LocalPosition: {x: 1.97, y: -3.1988688, z: 0}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &205456044546297695
+--- !u!212 &360774409123110973
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 205456044546297681}
+  m_GameObject: {fileID: 360774409123110974}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -73,24 +73,24 @@ SpriteRenderer:
   m_SortingLayerID: 1060143693
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 718847823688365954, guid: fb2a687d5414ef4459761bcb1a9529e6, type: 3}
+  m_Sprite: {fileID: 6407226241554960098, guid: 48d85d1ef51430e42b6aef57f02c863d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &205456044546297680
+--- !u!58 &360774409123110972
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 205456044546297681}
+  m_GameObject: {fileID: 360774409123110974}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -99,21 +99,22 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.38
---- !u!114 &1178019553173345176
+  m_Radius: 0.48
+--- !u!114 &360774409123110975
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 205456044546297681}
+  m_GameObject: {fileID: 360774409123110974}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9e3a6ec828f0b9468d7f69e9f38b10e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isMedkit: 0
-  isCoin: 1
-  isGun: 0
+  isCoin: 0
+  isGun: 1
   healAmount: 0
-  coinValue: 1
+  coinValue: 0
+  theGun: {fileID: 1718676369951107807, guid: 64adb17d4c5a93045b6bfd2ea574de6a, type: 3}

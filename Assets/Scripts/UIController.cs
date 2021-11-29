@@ -26,7 +26,12 @@ public class UIController : MonoBehaviour
 
     public Animator minimapAnim;
     public Camera miniMapCam;
+    public GameObject minimapText;
     public int zoomedCamSize, normalCamSize;
+
+
+    public Image currentGun;
+    public Text gunDescription;
 
     private void Awake()
     {
@@ -104,11 +109,15 @@ public class UIController : MonoBehaviour
     {
         minimapAnim.SetBool("ScaleUp", true);
         miniMapCam.orthographicSize = zoomedCamSize;
+        minimapText.SetActive(false);
     }
 
     public void mapScaleDown()
     {
         minimapAnim.SetBool("ScaleUp", false);
         miniMapCam.orthographicSize = normalCamSize;
+        minimapText.SetActive(true);
+        
+
     }
 }

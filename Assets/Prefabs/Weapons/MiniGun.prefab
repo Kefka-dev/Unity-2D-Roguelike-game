@@ -107,7 +107,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7711437449567951358}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.19, y: -0.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -183,6 +183,9 @@ MonoBehaviour:
   firePoint: {fileID: 885699925155899478}
   timeBetweenShots: 0.1
   Revolver: 0
+  Minigun: 1
+  weaponName: Minigun
+  gunUI: {fileID: -2480382951315576201, guid: f72804754a2106a4884d758772ef2a02, type: 3}
 --- !u!1 &8685565977250288653
 GameObject:
   m_ObjectHideFlags: 0
