@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShopItem : MonoBehaviour
 {
@@ -13,10 +14,25 @@ public class ShopItem : MonoBehaviour
     public int itemPrice;
 
     public int HealAmmount, MaxHealthIncreaseAmount;
+
+    public Gun[] potentialGuns;
+    private Gun theGun;
+    public SpriteRenderer gunSprite;
+    public Text infoText;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(isWeapon == true)
+        {
+            int selectedGun = Random.Range(0, potentialGuns.Length);
+            theGun = potentialGuns[selectedGun];
+
+            gunSprite.sprite = theGun.gunShopSprite;
+            itemPrice = theGun.itemCost;
+            infoText.text = theGun.weaponName + "\n - " + theGun.itemCost + " Gold - ";
+        }
     }
 
     // Update is called once per frame
@@ -40,6 +56,29 @@ public class ShopItem : MonoBehaviour
                     if (isHealthUpgrade)
                     {
                         PlayerHealthController.instance.increaseMaxHealth(MaxHealthIncreaseAmount);
+                        Destroy(gameObject);
+                    }
+
+                    if (isWeapon)
+                    {
+                        Gun gunClone = Instantiate(theGun);
+                        gunClone.transform.parent = PlayerController.instance.gunArm;
+                        if (gunClone.Minigun == true)
+                        {
+                            gunClone.transform.position = new Vector3(PlayerController.instance.gunArm.position.x + .1f, PlayerController.instance.gunArm.position.y - .4f, PlayerController.instance.gunArm.position.z);
+                            Debug.Log("MAM MINIGUN");
+                        }
+                        else
+                        {
+                            gunClone.transform.position = PlayerController.instance.gunArm.position;
+                            Debug.Log("MAM INU ZBRAN");
+                        }
+                        gunClone.transform.localRotation = Quaternion.Euler(Vector3.zero);
+                        gunClone.transform.localScale = Vector3.one;
+
+                        PlayerController.instance.availableGuns.Add(gunClone);
+                        PlayerController.instance.currentGun = PlayerController.instance.availableGuns.Count - 1;
+                        PlayerController.instance.switchGun();
                         Destroy(gameObject);
                     }
 
