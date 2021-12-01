@@ -260,6 +260,7 @@ MonoBehaviour:
   potentialGuns:
   - {fileID: 4180810574514236435, guid: 6f074ef14cfe9814b9f7c09643d3c158, type: 3}
   - {fileID: 885160085647069594, guid: 212bffc77fdbcf945a4993cace72a4e1, type: 3}
+  - {fileID: 7138868964455624935, guid: 594f6b930ca518146bb914c23b95f003, type: 3}
   theSR: {fileID: 5735241373133000749}
   chestOpen: {fileID: 444756885432138965, guid: 815f98a145a4ae14d897a7f431477ea9, type: 3}
   notification: {fileID: 5735241373321721593}

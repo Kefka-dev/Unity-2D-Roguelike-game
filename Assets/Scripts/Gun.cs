@@ -5,15 +5,17 @@ using UnityEngine;
 public class Gun : MonoBehaviour
 {
 
+    [Header("Shotgun settings")]
+    public bool Shotgun;
+    public Transform firePointShotgun1, firePointShotgun2, firePointShotgun3;
+    
+    [Header("Variables")]
     public GameObject bullet;
-    //public Transform[] firePoints;
     public Transform firePoint;
-    public int firepointID;
 
     public float timeBetweenShots;
     private float shotCounter;
-
-    public bool Revolver, Minigun, Shotgun;
+    public bool isAutomatic, Minigun;
 
     public string weaponName;
     public Sprite gunUI;
@@ -38,22 +40,22 @@ public class Gun : MonoBehaviour
             }
             else
             {
-                if (Input.GetMouseButtonDown(0) || (Input.GetMouseButton(0) && Revolver == false))
+                if (Input.GetMouseButtonDown(0) || (Input.GetMouseButton(0) && isAutomatic == false))
                 {
-                    /*if(Shotgun == true)
+                    if(Shotgun == true)
+                    {
+                        Instantiate(bullet, firePointShotgun1.position, firePointShotgun1.rotation);
+                        Instantiate(bullet, firePointShotgun2.position, firePointShotgun2.rotation);
+                        Instantiate(bullet, firePointShotgun3.position, firePointShotgun3.rotation);
+                        AudioManager.instance.PlaySFX(13);
+                        shotCounter = timeBetweenShots;
+                    }
+                    else
                     {
                         Instantiate(bullet, firePoint.position, firePoint.rotation);
-                        Instantiate(bullet, firePoint2.position, firePoint2.rotation);
-                        Instantiate(bullet, firePoint3.position, firePoint3.rotation);
                         AudioManager.instance.PlaySFX(13);
                         shotCounter = timeBetweenShots;
-                    }*/
-                    //else
-                    //{
-                        Instantiate(bullet, firePoint.position, firePoint.rotation);
-                        AudioManager.instance.PlaySFX(13);
-                        shotCounter = timeBetweenShots;
-                    //}
+                    }
                 }
                 
                 /*if (Input.GetMouseButton(0))
