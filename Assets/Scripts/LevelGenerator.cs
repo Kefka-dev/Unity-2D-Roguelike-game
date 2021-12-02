@@ -26,7 +26,7 @@ public class LevelGenerator : MonoBehaviour
 
     private GameObject endRoom, shopRoom, ChestRoom;
 
-    private List<GameObject> layouRoomObjects = new List<GameObject>();
+    public List<GameObject> layouRoomObjects = new List<GameObject>();
 
     public RoomPrefabs rooms;
 
@@ -69,7 +69,8 @@ public class LevelGenerator : MonoBehaviour
 
         if (includeShop)
         {
-            int shopSelector = Random.Range(minDistanceToShop, maxDistanceToShop + 1);
+            int shopSelector = Random.Range(minDistanceToShop, maxDistanceToShop /*+ 1*/);
+            Debug.Log("shopSelector ==:" + shopSelector + "\n layouRoomObjects.Count == " + layouRoomObjects.Count);
             shopRoom = layouRoomObjects[shopSelector];
             layouRoomObjects.RemoveAt(shopSelector);
             shopRoom.GetComponent<SpriteRenderer>().color = shopColor;
@@ -77,9 +78,10 @@ public class LevelGenerator : MonoBehaviour
 
         if (includeChestRoom)
         {
-            int ChestRSelector = Random.Range(minDistanceToChestRoom, maxDistanceToChestRoom + 1);
-            ChestRoom = layouRoomObjects[ChestRSelector];
-            layouRoomObjects.RemoveAt(ChestRSelector);
+            int ChestRSelector = Random.Range(minDistanceToChestRoom, maxDistanceToChestRoom /*+ 1*/);
+            Debug.Log("ChestRSelector ==:" + ChestRSelector + "\n layouRoomObjects.Count == " + layouRoomObjects.Count);
+            ChestRoom = layouRoomObjects[ChestRSelector - 1];
+            layouRoomObjects.RemoveAt(ChestRSelector - 1);
             ChestRoom.GetComponent<SpriteRenderer>().color = ChestRoomColor;
         }
 
