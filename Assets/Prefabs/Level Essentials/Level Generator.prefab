@@ -78,10 +78,14 @@ MonoBehaviour:
   startColor: {r: 0.06741722, g: 0.9528302, b: 0.31338987, a: 1}
   endColor: {r: 1, g: 0, b: 0, a: 1}
   shopColor: {r: 1, g: 0.845397, b: 0, a: 1}
+  ChestRoomColor: {r: 0.80598116, g: 0, b: 1, a: 1}
   distanceToEnd: 8
   includeShop: 1
   minDistanceToShop: 3
   maxDistanceToShop: 7
+  includeChestRoom: 1
+  minDistanceToChestRoom: 5
+  maxDistanceToChestRoom: 7
   generatorPoint: {fileID: 4556119652211120094}
   selectedDirection: 0
   xOffset: 18
@@ -108,6 +112,7 @@ MonoBehaviour:
   centerStart: {fileID: 8244879692445288680, guid: eecde4a3474bbca429cf233484c391bd, type: 3}
   centerEnd: {fileID: 1221513583118051159, guid: c8c034ed432e89d46988f0c28fa92909, type: 3}
   centerShop: {fileID: 1908571121851679834, guid: 5246b9da3dffb5a4eabbfbe32a2ac4af, type: 3}
+  centerChestRoom: {fileID: 1191168741918359318, guid: 73be670aaf3973741b3cc859dc51977e, type: 3}
   potentialCenters:
   - {fileID: 1191168741918359318, guid: d9800bc53fc6a544a860069ec252cfb0, type: 3}
   - {fileID: 8244879692445288680, guid: eecde4a3474bbca429cf233484c391bd, type: 3}

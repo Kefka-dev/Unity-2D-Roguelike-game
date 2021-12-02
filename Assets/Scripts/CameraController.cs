@@ -10,6 +10,7 @@ public class CameraController : MonoBehaviour
 
     public Transform target;
 
+    public Camera mainCamera;
     private void Awake()
     {
         instance = this;
@@ -33,5 +34,5 @@ public class CameraController : MonoBehaviour
     public void ChangeTarget(Transform newTarget)
     {
         target = newTarget;
-    }
+    } 
 }

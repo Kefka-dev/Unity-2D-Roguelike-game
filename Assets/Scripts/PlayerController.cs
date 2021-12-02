@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     public bool canMove = true;
 
     private Vector2 moveInput;
-    private Camera theCam;
+    //private Camera theCam;
     
 
     private float activeMovespeed;
@@ -41,12 +41,14 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         instance = this;
+
+        DontDestroyOnLoad(gameObject);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        theCam = Camera.main;
+        //theCam = Camera.main;
 
         activeMovespeed = moveSpeed;
 
@@ -71,7 +73,7 @@ public class PlayerController : MonoBehaviour
             theRB.velocity = moveInput * activeMovespeed;
 
             Vector3 mousePos = Input.mousePosition;
-            Vector3 screenPoint = theCam.WorldToScreenPoint(transform.localPosition);
+            Vector3 screenPoint = CameraController.instance.mainCamera.WorldToScreenPoint(transform.localPosition);
 
 
             //otocenie hraca a zbrane tak aby mierenie zbranou vyzeralo normalne
