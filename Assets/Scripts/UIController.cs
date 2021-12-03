@@ -43,6 +43,9 @@ public class UIController : MonoBehaviour
     {
         fadeOutBlack = true;
         fadeToBlack = false;
+
+        currentGun.sprite = PlayerController.instance.availableGuns[PlayerController.instance.currentGun].gunUI;
+        gunDescription.text = PlayerController.instance.availableGuns[PlayerController.instance.currentGun].weaponName;
     }
 
     // Update is called once per frame

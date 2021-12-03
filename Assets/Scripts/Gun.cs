@@ -40,7 +40,7 @@ public class Gun : MonoBehaviour
             }
             else
             {
-                if (Input.GetMouseButtonDown(0) || (Input.GetMouseButton(0) && isAutomatic == false))
+                if (Input.GetMouseButtonDown(0) || (Input.GetMouseButton(0) && isAutomatic == true))
                 {
                     if(Shotgun == true)
                     {
