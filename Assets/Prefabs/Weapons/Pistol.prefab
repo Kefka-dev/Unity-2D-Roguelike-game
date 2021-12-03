@@ -133,8 +133,8 @@ MonoBehaviour:
   firePointShotgun3: {fileID: 0}
   bullet: {fileID: 7364350935337371308, guid: 218b4f468a80c1e499358ee45d90116f, type: 3}
   firePoint: {fileID: 6588822766555136959}
-  timeBetweenShots: 0.6
-  isAutomatic: 0
+  timeBetweenShots: 0.5
+  isAutomatic: 1
   Minigun: 0
   weaponName: Pistol
   gunUI: {fileID: 262978286505467586, guid: f72804754a2106a4884d758772ef2a02, type: 3}
