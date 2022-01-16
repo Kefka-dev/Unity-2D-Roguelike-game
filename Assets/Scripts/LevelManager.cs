@@ -13,7 +13,6 @@ public class LevelManager : MonoBehaviour
     public bool isPaused;
     public int currentCoins;
 
-    private bool mapScaleUp;
 
     public Transform startPoint;
 
@@ -32,7 +31,6 @@ public class LevelManager : MonoBehaviour
         Time.timeScale = 1f;
 
         UIController.instance.coinText.text = currentCoins.ToString();
-        mapScaleUp = false;
     }
 
     // Update is called once per frame
@@ -41,20 +39,6 @@ public class LevelManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             pauseUnpause();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            if(mapScaleUp == false)
-            {
-                UIController.instance.mapScaleUp();
-                mapScaleUp = true;
-            } else
-            {
-                UIController.instance.mapScaleDown();
-                mapScaleUp = false;
-            }
-
         }
     }
 

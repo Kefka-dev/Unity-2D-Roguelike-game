@@ -1246,7 +1246,7 @@ MonoBehaviour:
   deathScreen: {fileID: 8057871096558648102}
   fadeScreen: {fileID: 8057871095066332700}
   fadeSpeed: 1
-  newGameScene: LevelTest
+  newGameScene: Level1
   mainMenuScene: TitleMenu
   pauseMenu: {fileID: 8057871095024212517}
   minimapAnim: {fileID: 547274775}
