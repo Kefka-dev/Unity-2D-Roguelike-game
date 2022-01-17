@@ -33,6 +33,8 @@ public class UIController : MonoBehaviour
     public Image currentGun;
     public Text gunDescription;
 
+    public Slider bossHealthBar;
+
     private void Awake()
     {
         instance = this;

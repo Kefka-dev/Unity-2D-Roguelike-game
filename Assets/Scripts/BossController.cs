@@ -14,6 +14,15 @@ public class BossController : MonoBehaviour
     private Vector2 moveDirection;
     public Rigidbody2D theRB;
 
+    public GameObject ShotPoints; //empty game object with all shot points
+
+    public int currentHealth;
+
+    public GameObject deathEffect, hitEffect;
+    public GameObject levelExit;
+
+    public BossSequence[] sequences;
+    public int currentSequence;
 
     private void Awake()
     {
@@ -22,7 +31,11 @@ public class BossController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        actions = sequences[currentSequence].actions;
         actionCounter = actions[currentAction].actionLenght;
+
+        UIController.instance.bossHealthBar.maxValue = currentHealth;
+        UIController.instance.bossHealthBar.value = currentHealth;
     }
 
     // Update is called once per frame
@@ -43,13 +56,17 @@ public class BossController : MonoBehaviour
 
                 }
 
-                if(actions[currentAction].moveToPoints == true)
+                if(actions[currentAction].moveToPoints == true && Vector3.Distance(transform.position, actions[currentAction].nextMovePoint.position) > .5f)
                 {
                     moveDirection = actions[currentAction].nextMovePoint.position - transform.position;
+                    moveDirection.Normalize();
                 }
             }
 
-
+            if (actions[currentAction].shouldSpin)
+            {
+                ShotPoints.transform.Rotate(0f, 0f, actions[currentAction].spinSpeed * Time.deltaTime);
+            }
             theRB.velocity = moveDirection * actions[currentAction].moveSpeed;
 
             //handle shooting
@@ -66,6 +83,8 @@ public class BossController : MonoBehaviour
                     }
                 }
             }
+
+
         } else
         {
             currentAction++;
@@ -75,6 +94,38 @@ public class BossController : MonoBehaviour
             }
             actionCounter = actions[currentAction].actionLenght;
         }
+    }
+
+    public void TakeDamage(int damageAmount)
+    {
+        currentHealth -= damageAmount;
+        if(currentHealth <= 0)
+        {
+            gameObject.SetActive(false);
+
+            Instantiate(deathEffect, transform.position, transform.rotation);
+            
+            if (Vector3.Distance(PlayerController.instance.transform.position, levelExit.transform.position) < 2f)
+            {
+                levelExit.transform.position += new Vector3(4f, 0f, 0f);
+            }
+
+            levelExit.SetActive(true);
+
+            UIController.instance.bossHealthBar.gameObject.SetActive(false);
+        }
+        else
+        {
+            if(currentHealth <= sequences[currentSequence].endSequenceHealth && currentSequence < sequences.Length -1)
+            {
+                currentSequence++;
+                actions = sequences[currentSequence].actions;
+                currentAction = 0;
+                actionCounter = actions[currentAction].actionLenght;
+            }
+        }
+
+        UIController.instance.bossHealthBar.value = currentHealth;
     }
 }
 
@@ -86,6 +137,8 @@ public class BossAction
 
     public bool shouldMove;
     public bool shouldChasePlayer;
+    public bool shouldSpin;
+    public float spinSpeed;
     public bool moveToPoints;
     public float moveSpeed;
 
@@ -95,4 +148,13 @@ public class BossAction
     public GameObject itemToShoot;
     public float timeBetweenShots;
     public Transform[] shotPoints;
+}
+
+[System.Serializable]
+public class BossSequence
+{
+    [Header("Sequence")]
+    public BossAction[] actions;
+    public int endSequenceHealth;
+
 }
