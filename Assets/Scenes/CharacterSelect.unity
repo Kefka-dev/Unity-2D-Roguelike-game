@@ -7306,30 +7306,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character Cage
       objectReference: {fileID: 0}
-    - target: {fileID: 4696871056502718447, guid: 61fe0ccefb4b4df4986ce840e9f0b520, type: 3}
-      propertyPath: charSelects.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4696871056502718447, guid: 61fe0ccefb4b4df4986ce840e9f0b520, type: 3}
-      propertyPath: charSelects.Array.data[1]
-      value: 
-      objectReference: {fileID: 2034235061, guid: 38b2e335cd9dbb341a2d4eef68a2420f, type: 3}
-    - target: {fileID: 4696871056502718447, guid: 61fe0ccefb4b4df4986ce840e9f0b520, type: 3}
-      propertyPath: charSelects.Array.data[2]
-      value: 
-      objectReference: {fileID: 1039484396, guid: 88ba8084c366a324a9baa5f10045d13d, type: 3}
-    - target: {fileID: 4696871056502718447, guid: 61fe0ccefb4b4df4986ce840e9f0b520, type: 3}
-      propertyPath: charSelects.Array.data[3]
-      value: 
-      objectReference: {fileID: 687057057, guid: 51f2c0a72eb51d646a77ded9fdff9d98, type: 3}
-    - target: {fileID: 4696871056502718447, guid: 61fe0ccefb4b4df4986ce840e9f0b520, type: 3}
-      propertyPath: charSelects.Array.data[4]
-      value: 
-      objectReference: {fileID: 1775472471, guid: 2a9b3e66917a8c240a14fc856ecec164, type: 3}
-    - target: {fileID: 4696871056502718447, guid: 61fe0ccefb4b4df4986ce840e9f0b520, type: 3}
-      propertyPath: charSelects.Array.data[5]
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 4696871056502718448, guid: 61fe0ccefb4b4df4986ce840e9f0b520, type: 3}
       propertyPath: m_RootOrder
       value: 9

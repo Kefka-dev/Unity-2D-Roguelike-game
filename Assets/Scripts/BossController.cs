@@ -20,6 +20,7 @@ public class BossController : MonoBehaviour
 
     public GameObject deathEffect, hitEffect;
     public GameObject levelExit;
+    public GameObject charCage;
 
     public BossSequence[] sequences;
     public int currentSequence;
@@ -111,6 +112,7 @@ public class BossController : MonoBehaviour
             }
 
             levelExit.SetActive(true);
+            charCage.SetActive(true);
 
             UIController.instance.bossHealthBar.gameObject.SetActive(false);
         }

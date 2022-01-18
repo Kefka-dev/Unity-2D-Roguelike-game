@@ -481,7 +481,10 @@ MonoBehaviour:
   message: {fileID: 4696871055703334254}
   charSelects:
   - {fileID: 475674304, guid: 47cb67b391cda694499a614eeb20439e, type: 3}
-  - {fileID: 1969380597, guid: 6000d9f8cc8d6c44883b61bfaf0e9541, type: 3}
+  - {fileID: 2034235061, guid: 38b2e335cd9dbb341a2d4eef68a2420f, type: 3}
+  - {fileID: 1039484396, guid: 88ba8084c366a324a9baa5f10045d13d, type: 3}
+  - {fileID: 687057057, guid: 51f2c0a72eb51d646a77ded9fdff9d98, type: 3}
+  - {fileID: 1775472471, guid: 2a9b3e66917a8c240a14fc856ecec164, type: 3}
   cagedSR: {fileID: 4696871056107781361}
 --- !u!1 &4696871057215423076
 GameObject:

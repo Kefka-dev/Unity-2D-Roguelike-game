@@ -253,6 +253,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f20c6e3b08084b4eb596103dfa9ea98, type: 3}
+--- !u!20 &2073231312 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3466392861050060828, guid: 8f20c6e3b08084b4eb596103dfa9ea98, type: 3}
+  m_PrefabInstance: {fileID: 2073231311}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3150225480302917396
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -332,7 +337,7 @@ PrefabInstance:
     - target: {fileID: 8057871096075950925, guid: 14f7957db6ad754458125ccd8a3ed9cf, type: 3}
       propertyPath: miniMapCam
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2073231312}
     - target: {fileID: 8057871096075950929, guid: 14f7957db6ad754458125ccd8a3ed9cf, type: 3}
       propertyPath: m_Pivot.x
       value: 0
