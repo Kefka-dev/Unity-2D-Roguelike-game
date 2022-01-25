@@ -29,12 +29,12 @@ public class UIController : MonoBehaviour
     public GameObject minimapText;
     public int zoomedCamSize, normalCamSize;
 
-
     public Image currentGun;
     public Text gunDescription;
 
     public Slider bossHealthBar;
 
+    public GameObject settingsPanel;
     private void Awake()
     {
         instance = this;
@@ -124,5 +124,14 @@ public class UIController : MonoBehaviour
         minimapText.SetActive(true);
         
 
+    }
+    public void SoundSettings()
+    {
+        settingsPanel.SetActive(true);
+    }
+    public void SaveSoundSettigns()
+    {
+        settingsPanel.SetActive(false);
+        AudioManager.instance.SaveSoundSettings();
     }
 }

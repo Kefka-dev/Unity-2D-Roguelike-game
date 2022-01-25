@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
 
     public string levelToLoad;
 
-    public GameObject deletePanel;
+    public GameObject deletePanel, soundPanel;
 
     public CharacterSelector[] charactersToDelete;
     // Start is called before the first frame update
@@ -50,5 +50,15 @@ public class MainMenu : MonoBehaviour
     public void CancelDelete()
     {
         deletePanel.SetActive(false);
+    }
+
+    public void SoundSettings()
+    {
+        soundPanel.SetActive(true);
+    }
+    public void SaveSoundSettigns()
+    {
+        soundPanel.SetActive(false);
+        AudioManager.instance.SaveSoundSettings();
     }
 }

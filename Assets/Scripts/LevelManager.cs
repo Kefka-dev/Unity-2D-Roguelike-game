@@ -13,7 +13,8 @@ public class LevelManager : MonoBehaviour
     public bool isPaused;
     public int currentCoins;
 
-
+    private string musicPref = "musicPref";
+    private string sfxPref = "sfxPref";
     public Transform startPoint;
 
     private void Awake()
@@ -29,6 +30,16 @@ public class LevelManager : MonoBehaviour
 
         currentCoins = CharacterTracker.instance.currentCoins;
         Time.timeScale = 1f;
+
+        AudioManager.instance.levelMusic.volume = PlayerPrefs.GetFloat(musicPref);
+        AudioManager.instance.winMusic.volume = PlayerPrefs.GetFloat(musicPref);
+        AudioManager.instance.gameOverMusic.volume = PlayerPrefs.GetFloat(musicPref);
+        //AudioManager.instance.titleMenuMusic.volume = PlayerPrefs.GetFloat(musicPref);
+
+        for (int i = 0; i < AudioManager.instance.sfx.Length; i++)
+        {
+            AudioManager.instance.sfx[i].volume = PlayerPrefs.GetFloat(sfxPref);
+        }
 
         UIController.instance.coinText.text = currentCoins.ToString();
     }
