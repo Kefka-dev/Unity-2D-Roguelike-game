@@ -205,7 +205,7 @@ MonoBehaviour:
   shootRange: 6
   theBody: {fileID: 7702855386467331322}
   anim: {fileID: 7702855386474381843}
-  health: 100
+  health: 80
   deatchSplatters:
   - {fileID: 53907094657283622, guid: a4b9a54eb27c0744183023ef8ecce87c, type: 3}
   - {fileID: 8452070707366762201, guid: 73b85c790150fe74cbd752b661f2ae40, type: 3}
@@ -215,7 +215,7 @@ MonoBehaviour:
   shouldDropItem: 0
   itemsToDrop:
   - {fileID: 205456044546297681, guid: 2286e4fee2f1dd642ae8adc08dc2fd51, type: 3}
-  itemDropChance: 25
+  itemDropChance: 60
 --- !u!50 &7702855386474381841
 Rigidbody2D:
   serializedVersion: 4

@@ -188,7 +188,7 @@ MonoBehaviour:
   timeBetweenShots: 0.1
   isAutomatic: 1
   Minigun: 1
-  weaponName: Minigun
+  weaponName: "Gu\u013Eomet"
   gunUI: {fileID: -2480382951315576201, guid: f72804754a2106a4884d758772ef2a02, type: 3}
   itemCost: 20
   gunShopSprite: {fileID: 6549473840129656578, guid: 48d85d1ef51430e42b6aef57f02c863d, type: 3}

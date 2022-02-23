@@ -28,7 +28,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2767698060977426940, guid: 6cd09b76c811ca341a0a73cb733a7d1e, type: 3}
       propertyPath: m_Text
-      value: '''Zombie'''
+      value: "'Zomb\xEDk'"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2767698060977426940, guid: 6cd09b76c811ca341a0a73cb733a7d1e, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 2bd7288bbaaa34f4898f11fccbb70bf7, type: 3}
+    - target: {fileID: 2767698060977426940, guid: 6cd09b76c811ca341a0a73cb733a7d1e, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4166889250077493515, guid: 6cd09b76c811ca341a0a73cb733a7d1e, type: 3}
       propertyPath: m_Name

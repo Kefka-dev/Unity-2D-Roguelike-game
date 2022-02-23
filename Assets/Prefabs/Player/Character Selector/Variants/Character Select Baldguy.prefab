@@ -68,19 +68,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3fd1bd137b8f53a4db22b3555a075485, type: 3}
+    m_Font: {fileID: 12800000, guid: 2bd7288bbaaa34f4898f11fccbb70bf7, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 20
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '''Baldguy'''
+  m_Text: '''Biznismen'''
 --- !u!114 &5380173867669972202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,19 +305,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3fd1bd137b8f53a4db22b3555a075485, type: 3}
+    m_Font: {fileID: 12800000, guid: 2bd7288bbaaa34f4898f11fccbb70bf7, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 20
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press 'E' to switch
+  m_Text: "Stla\u010D \"E\" pre zmenu postavy"
 --- !u!114 &5387857503692498903
 MonoBehaviour:
   m_ObjectHideFlags: 0

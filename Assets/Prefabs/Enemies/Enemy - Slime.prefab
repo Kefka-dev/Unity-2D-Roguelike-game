@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theRB: {fileID: 7812682900251993972}
-  moveSpeed: 3
+  moveSpeed: 4
   shouldChase: 1
   rangeToChasePlayer: 5
   shouldRunAway: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   shootRange: 10
   theBody: {fileID: 7812682900278446495}
   anim: {fileID: 7812682900251993974}
-  health: 150
+  health: 250
   deatchSplatters:
   - {fileID: 53907094657283622, guid: a4b9a54eb27c0744183023ef8ecce87c, type: 3}
   - {fileID: 8452070707366762201, guid: 73b85c790150fe74cbd752b661f2ae40, type: 3}
@@ -107,8 +107,8 @@ MonoBehaviour:
   hitEffect: {fileID: 524417406495958304, guid: e8d3483e3f006794cbc78b0bb0cd61ec, type: 3}
   shouldDropItem: 1
   itemsToDrop:
-  - {fileID: 205456044546297681, guid: 2286e4fee2f1dd642ae8adc08dc2fd51, type: 3}
-  itemDropChance: 25
+  - {fileID: 5237074242877743259, guid: bc9bde4f1bcb040408220392c5a39bf3, type: 3}
+  itemDropChance: 20
 --- !u!50 &7812682900251993972
 Rigidbody2D:
   serializedVersion: 4

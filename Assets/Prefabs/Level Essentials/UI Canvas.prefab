@@ -735,11 +735,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3fd1bd137b8f53a4db22b3555a075485, type: 3}
-    m_FontSize: 40
+    m_Font: {fileID: 12800000, guid: 2bd7288bbaaa34f4898f11fccbb70bf7, type: 3}
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 4
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -747,7 +747,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: press 'TAB' to scale
+  m_Text: "Stla\u010D \"TAB\" pre zv\xE4\u010D\u0161enie mapy"
 --- !u!1 &6069156692609097988
 GameObject:
   m_ObjectHideFlags: 0
@@ -1532,7 +1532,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3fd1bd137b8f53a4db22b3555a075485, type: 3}
+    m_Font: {fileID: 12800000, guid: 2bd7288bbaaa34f4898f11fccbb70bf7, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -1544,7 +1544,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PAUSED!
+  m_Text: "Hra pozastaven\xE1!"
 --- !u!1 &8057871096041763983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1901,19 +1901,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3fd1bd137b8f53a4db22b3555a075485, type: 3}
+    m_Font: {fileID: 12800000, guid: 2bd7288bbaaa34f4898f11fccbb70bf7, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 207
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: YOU DIED!
+  m_Text: ZOMREL SI!
 --- !u!1 &8057871096558648102
 GameObject:
   m_ObjectHideFlags: 0
@@ -2322,8 +2322,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3fd1bd137b8f53a4db22b3555a075485, type: 3}
-    m_FontSize: 40
+    m_Font: {fileID: 12800000, guid: 2bd7288bbaaa34f4898f11fccbb70bf7, type: 3}
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2643,7 +2643,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4510254927623599752, guid: d60b0f70092dd1c4f8e8e1ef34eb81aa, type: 3}
       propertyPath: m_Text
-      value: NEW GAME
+      value: "Nov\xE1 hra"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510254927623599752, guid: d60b0f70092dd1c4f8e8e1ef34eb81aa, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 2bd7288bbaaa34f4898f11fccbb70bf7, type: 3}
+    - target: {fileID: 4510254927623599752, guid: d60b0f70092dd1c4f8e8e1ef34eb81aa, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 4510254927810331360, guid: d60b0f70092dd1c4f8e8e1ef34eb81aa, type: 3}
       propertyPath: m_Pivot.x
@@ -2761,7 +2769,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4510254927623599752, guid: d60b0f70092dd1c4f8e8e1ef34eb81aa, type: 3}
       propertyPath: m_Text
-      value: RESUME
+      value: "Pokra\u010Dova\u0165"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510254927623599752, guid: d60b0f70092dd1c4f8e8e1ef34eb81aa, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 2bd7288bbaaa34f4898f11fccbb70bf7, type: 3}
+    - target: {fileID: 4510254927623599752, guid: d60b0f70092dd1c4f8e8e1ef34eb81aa, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 4510254927810331360, guid: d60b0f70092dd1c4f8e8e1ef34eb81aa, type: 3}
       propertyPath: m_Pivot.x
@@ -2879,7 +2895,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4510254927623599752, guid: d60b0f70092dd1c4f8e8e1ef34eb81aa, type: 3}
       propertyPath: m_Text
-      value: MAIN MENU
+      value: "Hlavn\xE9 menu"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510254927623599752, guid: d60b0f70092dd1c4f8e8e1ef34eb81aa, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 2bd7288bbaaa34f4898f11fccbb70bf7, type: 3}
+    - target: {fileID: 4510254927623599752, guid: d60b0f70092dd1c4f8e8e1ef34eb81aa, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 4510254927810331360, guid: d60b0f70092dd1c4f8e8e1ef34eb81aa, type: 3}
       propertyPath: m_Pivot.x
@@ -2997,7 +3021,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4510254927623599752, guid: d60b0f70092dd1c4f8e8e1ef34eb81aa, type: 3}
       propertyPath: m_Text
-      value: MAIN MENU
+      value: "Hlavn\xE9 menu"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510254927623599752, guid: d60b0f70092dd1c4f8e8e1ef34eb81aa, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 2bd7288bbaaa34f4898f11fccbb70bf7, type: 3}
+    - target: {fileID: 4510254927623599752, guid: d60b0f70092dd1c4f8e8e1ef34eb81aa, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4510254927810331360, guid: d60b0f70092dd1c4f8e8e1ef34eb81aa, type: 3}
       propertyPath: m_Pivot.x
