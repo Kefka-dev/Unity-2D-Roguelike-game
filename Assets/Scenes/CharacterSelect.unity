@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Revolver pickup
       objectReference: {fileID: 0}
+    - target: {fileID: 885160085647069593, guid: 212bffc77fdbcf945a4993cace72a4e1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 885160085647069597, guid: 212bffc77fdbcf945a4993cace72a4e1, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -302,6 +306,10 @@ PrefabInstance:
     - target: {fileID: 360774409123110974, guid: 116e4e86144a66f4389559c7cac239af, type: 3}
       propertyPath: m_Name
       value: Pistol pickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 360774409123110974, guid: 116e4e86144a66f4389559c7cac239af, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 116e4e86144a66f4389559c7cac239af, type: 3}
@@ -7086,6 +7094,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigun pickup
       objectReference: {fileID: 0}
+    - target: {fileID: 4180810574514236447, guid: 6f074ef14cfe9814b9f7c09643d3c158, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f074ef14cfe9814b9f7c09643d3c158, type: 3}
 --- !u!114 &1193804330 stripped
@@ -7312,6 +7324,10 @@ PrefabInstance:
     - target: {fileID: 7138868964455624932, guid: 594f6b930ca518146bb914c23b95f003, type: 3}
       propertyPath: m_Name
       value: Shotgun pickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 7138868964455624932, guid: 594f6b930ca518146bb914c23b95f003, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 594f6b930ca518146bb914c23b95f003, type: 3}
