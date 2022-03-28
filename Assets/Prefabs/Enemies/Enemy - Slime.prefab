@@ -83,7 +83,7 @@ MonoBehaviour:
   theRB: {fileID: 7812682900251993972}
   moveSpeed: 4
   shouldChase: 1
-  rangeToChasePlayer: 5
+  rangeToChasePlayer: 3
   shouldRunAway: 0
   runawayRange: 0
   shouldWander: 1
