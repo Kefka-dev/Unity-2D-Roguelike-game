@@ -93,6 +93,7 @@ MonoBehaviour:
   whatIsRoom:
     serializedVersion: 2
     m_Bits: 32768
+  layouRoomObjects: []
   rooms:
     singleUp: {fileID: 7620137672927961543, guid: 735460a8fe838b94e821a83f06de4bab, type: 3}
     singleDown: {fileID: 3326454119031055162, guid: c0298ccdf5a8d5e4b8e5e74a7e2cc9b7, type: 3}
@@ -115,7 +116,6 @@ MonoBehaviour:
   centerChestRoom: {fileID: 1191168741918359318, guid: 73be670aaf3973741b3cc859dc51977e, type: 3}
   potentialCenters:
   - {fileID: 1191168741918359318, guid: d9800bc53fc6a544a860069ec252cfb0, type: 3}
-  - {fileID: 8244879692445288680, guid: eecde4a3474bbca429cf233484c391bd, type: 3}
   - {fileID: 1191168741918359318, guid: 456d783dc0b956449a4c9b8ef7cd2b76, type: 3}
   - {fileID: 1191168741918359318, guid: 9c3352debceb3ee45b1297c3ede877db, type: 3}
   - {fileID: 1191168741918359318, guid: e39fd535b5b4ede48a77fdd4aa75330b, type: 3}

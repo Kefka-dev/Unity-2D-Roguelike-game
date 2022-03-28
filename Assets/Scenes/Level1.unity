@@ -182,38 +182,6 @@ PrefabInstance:
       propertyPath: includeChestRoom
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4556119652395343165, guid: 3affbabc62926054b8c2e42d3834d090, type: 3}
-      propertyPath: potentialCenters.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4556119652395343165, guid: 3affbabc62926054b8c2e42d3834d090, type: 3}
-      propertyPath: potentialCenters.Array.data[1]
-      value: 
-      objectReference: {fileID: 1191168741918359318, guid: 456d783dc0b956449a4c9b8ef7cd2b76, type: 3}
-    - target: {fileID: 4556119652395343165, guid: 3affbabc62926054b8c2e42d3834d090, type: 3}
-      propertyPath: potentialCenters.Array.data[2]
-      value: 
-      objectReference: {fileID: 1191168741918359318, guid: 9c3352debceb3ee45b1297c3ede877db, type: 3}
-    - target: {fileID: 4556119652395343165, guid: 3affbabc62926054b8c2e42d3834d090, type: 3}
-      propertyPath: potentialCenters.Array.data[3]
-      value: 
-      objectReference: {fileID: 1191168741918359318, guid: e39fd535b5b4ede48a77fdd4aa75330b, type: 3}
-    - target: {fileID: 4556119652395343165, guid: 3affbabc62926054b8c2e42d3834d090, type: 3}
-      propertyPath: potentialCenters.Array.data[4]
-      value: 
-      objectReference: {fileID: 1191168741918359318, guid: 68abc85236c86174aae1fa21322e1004, type: 3}
-    - target: {fileID: 4556119652395343165, guid: 3affbabc62926054b8c2e42d3834d090, type: 3}
-      propertyPath: potentialCenters.Array.data[5]
-      value: 
-      objectReference: {fileID: 1191168741918359318, guid: a13feeff8c0127d4db1348230869fcdd, type: 3}
-    - target: {fileID: 4556119652395343165, guid: 3affbabc62926054b8c2e42d3834d090, type: 3}
-      propertyPath: potentialCenters.Array.data[6]
-      value: 
-      objectReference: {fileID: 1191168741918359318, guid: b5a5a31cc959a1945818a1897ad790a7, type: 3}
-    - target: {fileID: 4556119652395343165, guid: 3affbabc62926054b8c2e42d3834d090, type: 3}
-      propertyPath: potentialCenters.Array.data[7]
-      value: 
-      objectReference: {fileID: 1191168741918359318, guid: 1f5d3f6690a1ae34483ff6e717212b94, type: 3}
     - target: {fileID: 4556119652395343166, guid: 3affbabc62926054b8c2e42d3834d090, type: 3}
       propertyPath: m_Name
       value: Level Generator
