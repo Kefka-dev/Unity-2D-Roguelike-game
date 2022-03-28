@@ -252,7 +252,7 @@ MonoBehaviour:
   Minigun: 0
   weaponName: Brokovnica
   gunUI: {fileID: 141494655013890540, guid: f72804754a2106a4884d758772ef2a02, type: 3}
-  itemCost: 5
+  itemCost: 15
   gunShopSprite: {fileID: -7426417008130601713, guid: 48d85d1ef51430e42b6aef57f02c863d, type: 3}
 --- !u!1 &9164339981136873337
 GameObject:

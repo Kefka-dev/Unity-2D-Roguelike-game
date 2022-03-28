@@ -739,7 +739,7 @@ MonoBehaviour:
   isWeapon: 0
   itemPrice: 15
   HealAmmount: 3
-  MaxHealthIncreaseAmount: 1
+  MaxHealthIncreaseAmount: 2
   potentialGuns: []
   gunSprite: {fileID: 0}
   infoText: {fileID: 0}
@@ -1073,7 +1073,7 @@ MonoBehaviour:
   isHealthUpgrade: 0
   isWeapon: 0
   itemPrice: 5
-  HealAmmount: 3
+  HealAmmount: 4
   MaxHealthIncreaseAmount: 0
   potentialGuns: []
   gunSprite: {fileID: 0}
@@ -2028,7 +2028,7 @@ MonoBehaviour:
   MaxHealthIncreaseAmount: 1
   potentialGuns:
   - {fileID: 4675694137008996662, guid: 2f818f0500faca44bb7db461e6307746, type: 3}
-  - {fileID: 1718676369951107807, guid: 64adb17d4c5a93045b6bfd2ea574de6a, type: 3}
+  - {fileID: 5135358804919472706, guid: 4a921c4d4e2ef7d4a8071919e5a696f9, type: 3}
   - {fileID: 1123114487546210405, guid: ac122aac34518754ab3d06edf9b30d9d, type: 3}
   gunSprite: {fileID: 1896657727140808098}
   infoText: {fileID: 2299162916816266115}

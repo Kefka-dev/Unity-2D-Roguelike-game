@@ -2769,7 +2769,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4510254927623599752, guid: d60b0f70092dd1c4f8e8e1ef34eb81aa, type: 3}
       propertyPath: m_Text
-      value: "Pokra\u010Dova\u0165"
+      value: "pokra\u010Dova\u0165"
       objectReference: {fileID: 0}
     - target: {fileID: 4510254927623599752, guid: d60b0f70092dd1c4f8e8e1ef34eb81aa, type: 3}
       propertyPath: m_FontData.m_Font
@@ -3021,7 +3021,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4510254927623599752, guid: d60b0f70092dd1c4f8e8e1ef34eb81aa, type: 3}
       propertyPath: m_Text
-      value: "Hlavn\xE9 menu"
+      value: "hlavn\xE9 menu"
       objectReference: {fileID: 0}
     - target: {fileID: 4510254927623599752, guid: d60b0f70092dd1c4f8e8e1ef34eb81aa, type: 3}
       propertyPath: m_FontData.m_Font

@@ -153,7 +153,7 @@ MonoBehaviour:
   shootRange: 10
   theBody: {fileID: 3278186311173846311}
   anim: {fileID: 3278186311164681166}
-  health: 200
+  health: 250
   deatchSplatters:
   - {fileID: 53907094657283622, guid: a4b9a54eb27c0744183023ef8ecce87c, type: 3}
   - {fileID: 8452070707366762201, guid: 73b85c790150fe74cbd752b661f2ae40, type: 3}

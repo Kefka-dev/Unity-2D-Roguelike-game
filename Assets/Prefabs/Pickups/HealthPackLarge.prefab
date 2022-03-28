@@ -99,8 +99,10 @@ MonoBehaviour:
   isMedkit: 1
   isCoin: 0
   isGun: 0
-  healAmount: 3
+  healAmount: 4
   coinValue: 0
+  theGun: {fileID: 0}
+  notification: {fileID: 0}
 --- !u!61 &5237074242877743263
 BoxCollider2D:
   m_ObjectHideFlags: 0
